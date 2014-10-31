@@ -58,7 +58,7 @@
  
  First group the dataset by year, month and day of month.
  Then use ddply to take each subset and add new variable:
- `arr = mean(ArrDelay, na.rm = TRUE)``
+ `arr = mean(ArrDelay, na.rm = TRUE)`
  
  Return this to a new dataset (call it `hf`)
  Subset this result to return only flights where the arrival delay was greater  than `30` hours.
