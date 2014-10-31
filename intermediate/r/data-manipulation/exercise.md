@@ -28,7 +28,7 @@ __Advanced version__
 
 3. With the list from the previous result, write a `lappy or llply` function call that will retrieve row number 1 from each dataset and return that back to a list.
 
-4. Read the `gapminderDataFiveYear.txt` dataset in the data folder into an object. Split the data by continent and country, find the year with the highest life expectancy for each combination and return those results back into a data.frame. 
+4. Read the `gapminderDataFiveYear.txt` dataset (using `gapminder <- read.csv("http://inundata.org/gapminder.csv")`) in the data folder into an object. Split the data by continent and country, find the year with the highest life expectancy for each combination and return those results back into a data.frame. 
 
 Hint: You will write a anonymous function (an unnamed function) that will exist only inside one of plyr's function call. 
 
@@ -48,7 +48,7 @@ You will have to:
 Advanced version of this question: Also return the year with highest population and highest per capita gdp. So you'll return 3 rows per country. 
 
 
-5. Read the `mammals.csv` file into a data.frame. Use `ddply` to split the dataset by limb morphology, then write each file to a separate text file named by limb.
+5. Read the `mammals.csv` (`mammals <- read.csv("http://inundata.org/mammals.csv")`) file into a data.frame. Use `ddply` to split the dataset by limb morphology, then write each file to a separate text file named by limb.
 
 Hints: Use `unique` inside your anoynymous function to get a unique name.
 Use `paste` to create a filename. e.g. `paste(unique(x$Limb_morphology), ".csv", sep="")`
