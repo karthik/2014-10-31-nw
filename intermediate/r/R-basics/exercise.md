@@ -3,7 +3,9 @@
 1. What is wrong with this code example?
 
 ```coffee
-df <- data.frame(id = c("Jason","Paul","Mary", "Robert","Toby","Nina","Robin","James"), x = 1:10, y = rnorm(10))
+df <- data.frame(id = c("Jason","Paul","Mary", "Robert","Toby","Nina","Robin","James"), 
+x = 1:10, 
+y = rnorm(10))
 ```
 
 2. Fix each of the following common data frame subsetting errors:
