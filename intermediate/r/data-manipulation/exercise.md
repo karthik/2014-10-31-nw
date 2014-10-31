@@ -1,5 +1,5 @@
  
- # Exercise on data manipulation
+# Exercise on data manipulation
  
  1. Take the `iris` dataset. Using `Species` as the indicator variable, convert  the wide dataset to long such that it appears as below:
  
