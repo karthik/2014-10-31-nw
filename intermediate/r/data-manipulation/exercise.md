@@ -1,9 +1,9 @@
 
-# Exercise 02
+# Exercise on data manipulation
 
 1. Take the `iris` dataset. Using `Species` as the indicator variable, convert the wide dataset to long such that it appears as below:
 
-```
+```r
   Species     variable value
 1  setosa Sepal.Length   5.1
 2  setosa Sepal.Length   4.9
@@ -47,8 +47,25 @@ You will have to:
 
 Advanced version of this question: Also return the year with highest population and highest per capita gdp. So you'll return 3 rows per country. 
 
+5. First install the hflights package (A dataset about flights from Houston's airport)
 
-5. Read the `mammals.csv` (`mammals <- read.csv("http://inundata.org/mammals.csv")`) file into a data.frame. Use `ddply` to split the dataset by limb morphology, then write each file to a separate text file named by limb.
+```r
+library(hflights)
+# or
+# install.packages('hflights')
+```
+Do the following operations:
+
+First group the dataset by year, month and day of month.
+Then use ddply to take each subset and add new variable:
+`arr = mean(ArrDelay, na.rm = TRUE)``
+
+Return this to a new dataset (call it `hf`)
+Subset this result to return only flights where the arrival delay was greater than `30` hours.
+
+
+
+6. Read the `mammals.csv` (`mammals <- read.csv("http://inundata.org/mammals.csv")`) file into a data.frame. Use `ddply` to split the dataset by limb morphology, then write each file to a separate text file named by limb.
 
 Hints: Use `unique` inside your anoynymous function to get a unique name.
 Use `paste` to create a filename. e.g. `paste(unique(x$Limb_morphology), ".csv", sep="")`
