@@ -30,14 +30,12 @@ Shell and Git are intentionally missing from this set. Please consult other less
 | __Reproducible Research__ |  [knitr.Rmd](reproducible-research/knitr.md) <br> [make.md](reproducible-research/make.md) <br> [markdown.md](reproducible-research/markdown.md) <br>  |
 | __Testing and Documentation__ | [documentation.md](testing-documentation/documentation.md) <br> [testing.Rmd](testing-documentation/testing.Rmd) <br>   |
 
-__Note:__ _You will not be able to teach all topics in 2 days, especially since the above table does not include Git or Shell. So you will have to drop Reproducible research or Testing/documentation (or both) depending on audience skill level and interest._
-
 
 ## Package installation
 
-Participants will require the following packages. Please transfer these instructions to your installation instructions page.
+Participants will require the following packages. 
 
-```coffee
+```r
 install.packages("devtools")
 # You'll need other non-R dependencies before you can install devtools. Please see the additional_software.md page for more instructions.
 install.packages(c("reshape2", "plyr", "ggplot2", "knitr", "testthat", "assertthat", "stringr", "pander"))
