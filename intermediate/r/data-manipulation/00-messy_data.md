@@ -85,6 +85,8 @@ In the example below, we use a data file obtained as plain text and clean up inc
 library("stringr")
 # If you don't have this package simply run install.packages("stringr")
 rawData <- readLines("data/messy_data.txt")
+# Or
+rawData <- readLines("http://inundata.org/messy_data.txt")
 rawData
 ```
 
