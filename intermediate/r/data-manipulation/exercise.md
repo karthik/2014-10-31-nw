@@ -67,7 +67,7 @@
  
  
  
- 6. Read the `mammals.csv` (`mammals <- read.csv("http://inundata.org/mammals. csv")`) file into a data.frame. Use `ddply` to split the dataset by limb  morphology, then write each file to a separate text file named by limb.
+ 6. Read the `mammals.csv` (`mammals <- read.csv("http://inundata.org/mammals.csv")`) file into a data.frame. Use `ddply` to split the dataset by limb  morphology, then write each file to a separate text file named by limb.
  
  Hints: Use `unique` inside your anoynymous function to get a unique name.
  Use `paste` to create a filename. e.g. `paste(unique(x$Limb_morphology), ". csv", sep="")`
