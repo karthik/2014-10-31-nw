@@ -52,7 +52,7 @@ head(dt)
 
 
 ```r
-url <- "data/climate.csv"
+url <- "http://inundata.org/climate.csv"
 my_data <- read.csv(url, header = TRUE)
 head(my_data)
 ```
