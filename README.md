@@ -13,7 +13,7 @@ __Friday__
 
 | Time Slot | Lesson |
 | --------  | ----- | 
-| Morning session 1 | Shell |
+| Morning session 1 | [Shell](http://karthik.github.io/2014-10-31-nw/novice/shell/) |
 | Morning session 2 | R Basics |
 | 12-1 | Lunch |
 | Afternoon session 1 | Functions in R |
