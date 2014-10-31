@@ -7,6 +7,7 @@ df <- data.frame(id = c("Jason","Paul","Mary", "Robert","Toby","Nina","Robin","J
 x = 1:10, 
 y = rnorm(10))
 ```
+Can you fix it?
 
 2. Fix each of the following common data frame subsetting errors:
 
