@@ -1,27 +1,27 @@
 # Exercise for session 01
 
-1. What is wrong with this code example?
-
-```coffee
-df <- data.frame(id = c("Jason","Paul","Mary", "Robert","Toby","Nina","Robin","James"), 
-x = 1:10, 
-y = rnorm(10))
-```
-Can you fix it?
-
-2. Fix each of the following common data frame subsetting errors:
-
-```coffee
-mtcars[mtcars$cyl = 4, ]
-# Exclude only rows 1 through 4
-mtcars[-1:4, ]
-# Return only rows for cylinders less than 5
-mtcars[mtcars$cyl <= 5]
-# Return only rows for cylinders that are 4 or 6.
-mtcars[mtcars$cyl == 4 | 6, ]
-```
-
-3. Why does `mtcars[1:20]` return a error? How does it differ from the similar `mtcars[1:20, ]`?
+ 1. What is wrong with this code example?
+ 
+ ```coffee
+ df <- data.frame(id = c("Jason","Paul","Mary",  "Robert","Toby","Nina","Robin","James"), 
+ x = 1:10, 
+ y = rnorm(10))
+ ```
+ Can you fix it?
+ 
+ 2. Fix each of the following common data frame subsetting errors:
+ 
+ ```coffee
+ mtcars[mtcars$cyl = 4, ]
+ # Exclude only rows 1 through 4
+ mtcars[-1:4, ]
+ # Return only rows for cylinders less than 5
+ mtcars[mtcars$cyl <= 5]
+ # Return only rows for cylinders that are 4 or 6.
+ mtcars[mtcars$cyl == 4 | 6, ]
+ ```
+ 
+ 3. Why does `mtcars[1:20]` return a error? How does it differ from the similar  `mtcars[1:20, ]`?
 
 
 4. Load the `ggplot2` package. There should be a dataset called `diamonds`. You can verify that by typing in `data(diamonds)`
