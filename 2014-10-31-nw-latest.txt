@@ -1,0 +1,221 @@
+Etherpad for Kellogg Software Carpentry Bootcamp
+
+Link to GitHub repo: http://bit.ly/swc_nw
+
+Good morning and welcome to the bootcamp. 
+
+Morning logistics
+
+1. If you need any help with setup, please flag down Dirk, Ramnath, Jackie, Karthik or Bob. If you're already setup with software, download a copy of a new GitHub repository ( https://github.com/karthik/2014-nw-filesystem ) using the download zip file on the bottom of the right hand side panel. Please unzip the folder into your Desktop.
+
+2. Please grab a few (2-3) red and green post it notes and set them down next to your computer. We'll use them throughout the bootcamp
+
+3. Please put on a name tag. The sticky tags are to the right of the candy bowl.
+
+
+Shell
+------------------------
+Here is the link to the shell material: http://karthik.github.io/2014-10-31-nw/novice/shell/
+
+Please download a copy of a new GitHub repository ( https://github.cohm/karthik/2014-nw-filesystem ) using the download zip file on the bottom of the right hand side panel. Please unzip the folder into your Desktop.
+
+Commands used so far:
+cd means Change Directory. If you want to change to a sub-folder, type cd, followed by a space and the name of the folder. Hitting the tab key will autocomplete the folder name. If there is more than one choice, the shell will show you all available options.
+
+Typing in cd <enter> will take you back to your home folder (i.e. your user account). This is similar to doing cd ~ (~ is short form for your username)
+
+cd .. (means go one directory above). A single period only references files in your current folder. 
+
+pwd is short for Print Working Directory. It will show the full path to where you currently are. Use whenever you feel lost.
+
+ls is short for list.
+Possible options:
+ls -l (list files in long format)
+ls -la (list files in long format, -a means all files)
+ls -lh (list the file sizes in human readable format instead of bytes)
+ls -lS (Will show the long list with files sorted by size).
+ls -F (will help distinguish folders from files. Folders (directories) will have a trailing /)
+
+mkdir <dir name> (is short for make directory).
+rmdir <dir name> will delete a directory (assuming it is empty). It is possible to delete directories that have content, but we don't recommend using that as a beginner. Unix does not have a Recycle Bin so files will be lost forever.
+Making multiple directories at once: mkdir dir1 dir2 dir3
+
+You can also create hundreds of folders simply based on a pattern. Try this
+
+mkdir new
+cd new
+mkdir {2007..2009}-{01..12}
+ls
+2007-01 2007-04 2007-07 2007-10 2008-01 2008-04 2008-07 2008-10 2009-01 2009-04 2009-07 2009-10
+2007-02 2007-05 2007-08 2007-11 2008-02 2008-05 2008-08 2008-11 2009-02 2009-05 2009-08 2009-11
+2007-03 2007-06 2007-09 2007-12 2008-03 2008-06 2008-09 2008-12 2009-03 2009-06 2009-09 2009-12
+
+Now we created folders for two years for every month in a single line of code.
+
+
+
+
+Copying and removing files
+To copy files, use the cp command.
+cp notes.txt new_notes.txt will create a copy of the file in the same location
+
+
+for file in $(ls a* e* o*);
+    do echo $file
+    wc -c $file
+done
+
+A
+Notes: Unix commands typically follow the format where we type the name of the command, possibly followed by more options (not always necessary), and arguments. When you have more than one option, you can combine those as shown in the last few ls examples.
+
+If you want to learn more about the Linux Shell, this book (free) is a great reference PDF: http://linuxcommand.org/tlcl.php
+
+
+
+
+R Basics (morning session 2)
+----------------
+
+1. Download this script http://goo.gl/VdeoSM and save as rblocks.R
+OR 
+just run this in Rstudio's console
+source("http://inundata.org/rblocks.R")
+
+2. Create objects:  
+<-  for assignment   
+c() to combine
+
+3. Index by
+- position (either by included or excluded index)
+- name(s)
+- logical value
+used for both extraction and assignment
+
+row and column index for matrices
+
+list
+
+data.frame 
+
+If ever in doubt, use class(object_name) to get the class of the object.
+
+Please spend the last 15 to 20 minutes before lunch working though this exercise:
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/R-basics/exercise.md
+
+If you need a refresher on subsetting: https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/R-basics/05-subsetting.md
+
+
+Functions in R (afternoon session 1)
+-------------------------------------------
+
+myfirstfunction <- function() {
+    cat("Hello, World! \n")
+    }
+    
+myfirstfunction()
+
+Search all functions in R packages from CRAN/GitHub
+
+http://www.rdocumentation.org/
+
+
+Data manipulation/munging in R (afternoon session 2)
+-------------------------------------------
+
+Data Manipulation (Afternoon session 2)
+
+Help on R: https://github.com/karthik/2014-10-31-nw/tree/gh-pages/intermediate/r/R-basics
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/R-basics/03-best-practices.md
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/R-basics/04-seeking-help.md
+
+Please install a few packages by pasting this into your R console
+
+install.packages(c("reshape2", "plyr", "ggplot2", "knitr", "testthat", "assertthat", "stringr", "pander"))
+
+Post a red post-it if you have trouble.
+
+**Reading data into R**
+
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/data-manipulation/01-input-output.md
+
+url <- "http://inundata.org/climate.csv"
+my_data <- read.csv(url, header = TRUE)
+head(my_data)
+
+**The apply family**
+
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/data-manipulation/02-apply-family.md#learning-the-apply-family-of-functions
+
+**Cleaning up messy data (a working example)**
+
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/data-manipulation/00-messy_data.md
+
+
+
+**Map reduce in R**
+
+What is map reduce? 
+http://research.google.com/archive/mapreduce.html
+
+"MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key."
+
+https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/data-manipulation/03-split-apply.Rmd
+
+
+sdf <- structure(list(color = structure(c(2L, 1L, 2L, 2L, 1L), .Label = c("black",
+"blue"), class = "factor"), value = 1:5), .Names = c("color",
+"value"), row.names = c(NA, -5L), class = "data.frame")
+
+
+gapminder <- read.csv("http://inundata.org/gapminder.csv")
+
+Exercise: https://github.com/karthik/2014-10-31-nw/blob/gh-pages/intermediate/r/data-manipulation/exercise.md
+
+
+Saturday morning
+
+Git and GitHub
+
+Morning! Please do these two things first:
+
+Open this presentation in a new tab:  http://karthik.github.io/git_intro/
+Next, open terminal and make sure you can access some text editor. Either nano or notepad. If you need help with an alias, or changes to your path, please speak to a helper.
+
+
+http://karthik.github.io/git_intro/#/configuration
+
+cd ..
+git clone https://github.com/karthik/new_project.git
+
+cd
+git clone https://github.com/karthik/2014-10-31-nw.git
+
+Saturday afternoon
+
+THINGS TO DO BEFORE SESSION
+
+1. Make sure you have RStudio Version >= 0.98.932. If not, please download
+2. Run git clone http://github.com/ramnathv/swc-nw-dataviz
+3. Link: http://ramnathv.github.io/swc-nw-dataviz/index.html
+Here is the direct link: http://ramnathv.github.io/swc-nw-rcharts/#1
+
+Link to ggplot2 online docs:
+
+http://docs.ggplot2.org/current/
+
+http://slidify.github.io/playground/ (Slidify: Github Only Package)
+
+
+
+Here is the link to the ggplot material already in the GitHub repo:
+
+https://github.com/karthik/2014-10-31-nw/tree/gh-pages/intermediate/r/data-visualization
+
+Click on the pdf file and download it to view. Walks you through majority of the features of ggplot2.
+
+
+
+
+
+
+
