@@ -214,8 +214,30 @@ https://github.com/karthik/2014-10-31-nw/tree/gh-pages/intermediate/r/data-visua
 Click on the pdf file and download it to view. Walks you through majority of the features of ggplot2.
 
 
+All changes on this etherpad are now on the GitHub repo for the workshop: https://github.com/karthik/2014-10-31-nw
 
 
+# Feedback
+---------------------
 
-
+1. Pace could be better.
+2. Add download link to course material.
+3. Provide solutions to exercises +1 (we can post those to the github repo).
+4. Additional exercises to practice with.
+5. Pretty intense. 
+6. Add references for further learning.
+7. Mistakes put you really far behind. Pair up with a buddy to keep up.
+8. Slow down on pace.
+9. Be clearer about the documents to access, maybe even pdfs (example link to data visualization exercises)
+10. Running list of commands (maybe cheat sheets)
+11. Figure out a way to play catchup.
+12. Provide links to learning material (example RMarkdown, Shiny etc.)
+13. Git (command line + other clients potentially?)
+14. Recordings (coursera style self paced????)
+15. Some people are more advanced and others still catching up. Perhaps separate groups.
+16. More advanced prep to make it easier for beginners.
+17. MOAR SHELL!!!
+18. Use more domain specific data for homogeneous groups. +1
+19. Multiple Screens (Input on One, Output on Second)
+20. 
 
